@@ -6,7 +6,19 @@ var dataFile = require('./data/data.json');
 app.set('port', process.env.PORT || 3000);
 
 app.get('/', function(req, res) {
-    res.send('Hello wordl!');
+    var info = '';
+    dataFile.speakers.forEach(function(item) {
+        info += `
+            <li>
+                <h3>${item.name}</h3>
+                <p>${item.summary}</p>
+            </li>
+        `;
+    });
+    res.send(`
+        <h2>Lecture Speakers</h2>
+        ${info}
+    `);
 });
 
 var server = app.listen(app.get('port'), function() {
