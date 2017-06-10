@@ -1,0 +1,11 @@
+{
+  "name": "node-with-express",
+  "version": "1.0.0",
+  "description": "Creating and learing NodeJs using ExpressJs",
+  "main": "/app/app.js",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "author": "Vineet Upadhyay",
+  "license": "MIT"
+}
