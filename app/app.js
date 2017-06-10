@@ -3,7 +3,7 @@ var app = express();
 var dataFile = require('./data/data.json');
 
 //Set dynamic port environment and default to 3000
-app.set('port', precess.env.PORT || 3000);
+app.set('port', process.env.PORT || 3000);
 
 app.get('/', function(req, res) {
     res.send('Hello wordl!');
